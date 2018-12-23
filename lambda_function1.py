@@ -5,7 +5,7 @@ from botocore.vendored import requests
 
 def lambda_handler(event, context):
     # TODO implement
-    URL = 'http://api.openweathermap.org/data/2.5/forecast?q=Queens,us&appid=1026b7625ff1ec232a7927edbe48af1e'
+    URL = 'http://api.openweathermap.org/data/2.5/forecast?q=Queens,us&appid={API-KEY}'
     r = requests.get(URL)
     data = r.json()
     length = len(data["list"])
